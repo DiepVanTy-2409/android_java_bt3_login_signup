@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/image"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:drawableStart="@drawable/baseline_copyright_24_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:text="Diệp Văn Tý_21115053120161"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/white"
+                android:layout_gravity="end"
+                android:textSize="20dp"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/wave_bg_white"
+                android:scaleType="fitEnd"
+                android:layout_above="@+id/login_main_content"
+                />
+
+            <LinearLayout
+                android:id="@+id/login_main_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingHorizontal="40dp"
+                android:paddingBottom="50dp"
+                android:layout_alignParentBottom="true"
+                >
+                <!-- INTRO -->
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome Back"
+                    android:textColor="@color/primary_color"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Login to your account"
+                    android:textColor="@color/gray" />
+
+                <!-- INPUT -->
+
+                <EditText
+                    android:id="@+id/userName"
+                    style="@style/editTextStyle"
+                    android:drawableStart="@drawable/baseline_email_24"
+                    android:hint="Email"  />
+
+                <EditText
+                    android:id="@+id/password"
+                    style="@style/editTextStyle"
+                    android:drawableStart="@drawable/baseline_lock_24"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="50dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/baseline_check_circle_24"
+                        android:drawablePadding="5dp"
+                        android:text="Remember me"
+                        android:textColor="#939393" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="Forgot password?"
+                        android:textColor="@color/primary_color"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+
+                <!-- FOOTER -->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnLogin"
+                    style="@style/greenButton"
+                    android:text="Login" />
+
+                <LinearLayout
+                    android:id="@+id/login_bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Don't have account?"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/changeToSignup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sign up"
+                        android:textColor="@color/primary_color"
+                        android:textStyle="bold"
+                        android:padding="20dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
